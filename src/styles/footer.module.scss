@@ -1,0 +1,24 @@
+.footer{
+  padding : 2rem 0 ; 
+  background-color : var(--mainDark)  ;
+  color : var(--mainYellow);
+  display : flex ; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & a{
+    display : inline-block;
+    text-decoration: none;
+    transition: var(--mainTransition);
+    color : var(--mainYellow);
+    text-transform: capitalize;
+    padding : 1rem 1.25rem;    
+    &:hover{
+      color : var(--mainWhite);
+    }
+  }
+}
+
+
+

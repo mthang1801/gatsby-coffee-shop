@@ -1,0 +1,57 @@
+
+:root {
+  --mainBrown: #2d1e1f;
+  --mainYellow: rgb(255, 158, 9);
+  --mainGrey: #ece8dc;
+  --mainWhite: #fff;
+  --mainDark: #222;
+  --mainSpacing: 0.25rem;
+  --mainTransition : all 0.5s linear;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+*{
+  margin : 0;
+  padding : 0 ;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  background-color: var(--mainWhite);
+  color: var(--mainDark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Courier New", Courier, monospace !important;
+  letter-spacing: var(--mainSpacing);
+}
+
+.background-default .title{
+  text-transform: uppercase;
+  font-size : 3.5em;  
+}
+
+.btn-yellow{
+  color : var(--mainYellow);
+  border:  1px solid var(--mainYellow);
+  background-color: var(--mainWhite);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding : 0.5rem;
+  outline : none ; 
+  cursor: pointer;
+  border-radius: 0.2rem;
+  transition: var(--mainTransition);
+}
+
+.btn-yellow:hover{
+  background-color: var(--mainYellow);
+  color : var(--mainWhite);
+}

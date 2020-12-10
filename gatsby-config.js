@@ -1,3 +1,7 @@
+const path = require("path");
+require("dotenv").config({
+  path : ".env"
+})
 /**
  * Configure your Gatsby site with this file.
  *
@@ -6,5 +10,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve : `gatsby-source-filesystem`,
+      options : {
+        name : "images",
+        path :  path.resolve("./src/images")
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`
+  ],
 }
