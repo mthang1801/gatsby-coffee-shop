@@ -11,8 +11,8 @@ const Title = ({ title, subtitle, className }) => {
   )
 }
 
-export default styled(Title)`
-  margin : 0 auto 3rem auto;
+export default styled(Title)`  
+  margin-bottom : 1.5rem;
   text-align : center;
   text-transform: uppercase;
   font-size : 1.2em;

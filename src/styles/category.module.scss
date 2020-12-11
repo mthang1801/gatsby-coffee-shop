@@ -1,0 +1,17 @@
+.category{
+  width : 80vw;
+  margin : 2rem auto 3rem auto;
+}
+
+.center{  
+  display : grid ; 
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  grid-gap: 2rem;
+}
+
+@media screen and (min-width: 992px){
+  .category{
+    width : 90%; 
+    max-width: 1280px;    
+  }
+}

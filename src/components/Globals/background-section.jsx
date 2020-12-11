@@ -51,4 +51,5 @@ export default styled(BackgroundSection)`
   .title{
     font-size : 2.5em;
   }
+  z-index: - 1;
 `

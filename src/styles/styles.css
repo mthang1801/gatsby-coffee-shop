@@ -55,3 +55,21 @@ h6 {
   background-color: var(--mainYellow);
   color : var(--mainWhite);
 }
+
+.container{
+  padding : 3rem 0;
+  width : 80vw;
+  margin: auto;
+}
+
+.wrapper{
+  margin : 2rem auto 3rem auto;
+  text-align :center;
+}
+
+@media screen and (min-width:992px){
+  .container{    
+    max-width : 600px;    
+  }
+}
+

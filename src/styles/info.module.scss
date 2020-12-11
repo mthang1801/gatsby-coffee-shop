@@ -1,19 +1,12 @@
-.info{
-  padding : 3rem 0;
-  width : 80vw;
-  margin : auto;
+.info{  
+  margin : 2rem auto;
   text-align: center;
 }
 
 .center{
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
-@media screen and (min-width: 768px){
-  .info{
-    width : 600px;
-  }
-}
 
 .btnReadMore{
   cursor: pointer;
