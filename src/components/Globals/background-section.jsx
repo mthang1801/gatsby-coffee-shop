@@ -50,6 +50,7 @@ export default styled(BackgroundSection)`
   text-align: center;
   .title{
     font-size : 2.5em;
+    text-transform : uppercase ; 
   }
   z-index: - 1;
 `

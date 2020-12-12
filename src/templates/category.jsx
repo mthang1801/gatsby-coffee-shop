@@ -1,10 +1,56 @@
-import React from 'react'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Globals/layout"
+import ProductsList  from "../components/Products/products-list"
+export const query = graphql`
+  query($category: String) {
+    products: allContentfulCoffeeShopProducts(
+      filter: { category: { eq: $category } }
+      sort: { order: ASC, fields: price }
+    ) {
+      edges {
+        node {
+          contentful_id
+          title
+          createdAt
+          description
+          price
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+          detail {
+            raw
+          }
+        }
+      }
+    }
 
-const CategoryTemplate = () => {
+    category: allContentfulCoffeeShopCategory(
+      filter: { title: { eq: $category } }
+    ) {
+      edges {
+        node {
+          title
+          image {
+            fluid(maxWidth:4000, maxHeight:400) {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
+const CategoryTemplate = props => {
+  const {category} = props.data;
+  const {products} = props.data; 
   return (
-    <div>
-      Category template
-    </div>
+    <Layout title={props.pathContext.category} >    
+      {products.edges.length ? <ProductsList products={products.edges} /> : <h4 className="txt-center">Products empty</h4>}
+      
+    </Layout>
   )
 }
 

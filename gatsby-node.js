@@ -3,21 +3,38 @@ exports.createPages = async ({graphql, actions}) => {
   const {createPage} = actions
   const {data} = await graphql(`
   query{
-    allContentfulCoffeeShopCategory{
+    category : allContentfulCoffeeShopCategory{
       edges{
         node{
           title
         }
       }
     }
+    products : allContentfulCoffeeShopProducts{
+      edges{
+        node{
+          contentful_id
+        }
+      }
+    }
   }
   `)
-  data.allContentfulCoffeeShopCategory.edges.forEach( ({node}) => {
+  
+  data.category.edges.forEach( ({node}) => {
     createPage({
       path : `/category/${node.title}`, 
       component : path.resolve("./src/templates/category.jsx"),
       context : {
         category : node.title
+      }
+    })
+  })
+  data.products.edges.forEach( ({node}) => {
+    createPage({
+      path : `/product/${node.contentful_id}`, 
+      component : path.resolve("./src/templates/product.jsx"),
+      context : {
+        _id : node.contentful_id
       }
     })
   })

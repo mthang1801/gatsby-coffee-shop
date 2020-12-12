@@ -3,7 +3,7 @@
   box-shadow: var(--lightShadow);
   .title {
     position: absolute;
-    transition: var(--mainTransition);
+    transition: var(--secondaryTransition);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -20,10 +20,10 @@
       rgba(44, 27, 0, 0.8)
     );
     height: 280px;
-    transition: var(--mainTransition);
+    transition: var(--secondaryTransition);
     .img {
       height: 100%;
-      transition: var(--mainTransition);
+      transition: var(--secondaryTransition);
       opacity: 0.4;
     }
     .link{
@@ -37,7 +37,7 @@
       transform: translate(-50%, -50%);
       opacity: 0;
       transition: all 0.5s;
-      transition-delay: 0.5s;
+      transition-delay: 0.2s;
       border : 1.5px solid var(--mainYellow);
       text-decoration: none;
       &:hover{

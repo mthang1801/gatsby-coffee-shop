@@ -2,11 +2,15 @@
 :root {
   --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
+  --mainIndigo : #283593;
+  --mainGreen : #43a047 ;
+  --mainRed : #e53935 ;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
   --mainSpacing: 0.25rem;
-  --mainTransition : all 0.5s linear;
+  --mainTransition : all 0.4s linear;
+  --secondaryTransition : all 0.2s ;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -31,6 +35,10 @@ h5,
 h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: var(--mainSpacing);
+}
+
+li{
+  margin-left : 1rem;
 }
 
 .background-default .title{
@@ -67,9 +75,22 @@ h6 {
   text-align :center;
 }
 
+.content{
+  width : 80vw;
+  margin : 2rem auto 3rem auto;
+}
+.txt-center{
+  text-align: center;
+}
+
 @media screen and (min-width:992px){
   .container{    
     max-width : 600px;    
   }
+  .content{
+    width : 90%; 
+    max-width: 1280px;
+  }
 }
+
 

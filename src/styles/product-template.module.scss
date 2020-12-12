@@ -1,0 +1,77 @@
+
+.center{
+  width : 80vw;
+  margin :auto;
+}
+h1,
+h2,
+h3,
+h4,
+h6 {
+  letter-spacing: unset;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+h2,
+h3 {
+  margin: 0.75rem;
+}
+
+h4 {
+  margin: 0.5rem;
+}
+
+h5,
+h6 {
+  margin: 0.25rem;
+}
+
+.title {
+  font-size: 2.5em;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  color: var(--mainYellow);
+}
+
+.date {
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.img-container {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  width : 80vw;
+  margin: 3rem auto;
+}
+
+.other-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 2rem;
+}
+
+hr{
+  margin : 2rem auto;
+}
+
+@media screen and (min-width: 768px){
+  .center{
+    width : 600px;    
+  }
+  .footer{
+    width : 90% ; 
+    max-width : 1280px;
+  }
+}
