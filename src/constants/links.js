@@ -13,9 +13,5 @@ export default [
   {
     path : "/about",
     name : "About"
-  },
-  {
-    path : "/contact", 
-    name : "contact"
   }
 ]
