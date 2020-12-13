@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         <button className={`${styles.btnAddToCart} snipcart-add-item`}
             data-item-id={product.contentful_id}
             data-item-price={product.price}
-            data-item-url={`https://coffee-shop-demo-13122020.netlify.app/products/`}
+            data-item-url={`https://test.coffee-shop-demo-13122020.netlify.app/products/`}
             data-item-description={product.description}
             data-item-image={product.image.fluid.src}
             data-item-name={product.title}

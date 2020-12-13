@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Globals/layout"
 import ProductsList from "../components/Products/products-list"
+import SEO from "../components/SEO/seo"
 export const query = graphql`
   query($category: String) {
     products: allContentfulCoffeeShopProducts(
@@ -48,6 +49,7 @@ const CategoryTemplate = props => {
   const { products } = props.data
   return (
     <Layout title={props.pathContext.category}>
+      <SEO title="category"/>
       <div className="content">
         {products.edges.length ? (
           <ProductsList products={products.edges} />
