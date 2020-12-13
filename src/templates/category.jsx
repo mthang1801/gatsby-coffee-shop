@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Globals/layout"
-import ProductsList  from "../components/Products/products-list"
+import ProductsList from "../components/Products/products-list"
 export const query = graphql`
   query($category: String) {
     products: allContentfulCoffeeShopProducts(
@@ -34,7 +34,7 @@ export const query = graphql`
         node {
           title
           image {
-            fluid(maxWidth:4000, maxHeight:400) {
+            fluid(maxWidth: 4000, maxHeight: 400) {
               ...GatsbyContentfulFluid
             }
           }
@@ -44,12 +44,17 @@ export const query = graphql`
   }
 `
 const CategoryTemplate = props => {
-  const {category} = props.data;
-  const {products} = props.data; 
+  const { category } = props.data
+  const { products } = props.data
   return (
-    <Layout title={props.pathContext.category} >    
-      {products.edges.length ? <ProductsList products={products.edges} /> : <h4 className="txt-center">Products empty</h4>}
-      
+    <Layout title={props.pathContext.category}>
+      <div className="content">
+        {products.edges.length ? (
+          <ProductsList products={products.edges} />
+        ) : (
+          <h4 className="txt-center">Products empty</h4>
+        )}
+      </div>
     </Layout>
   )
 }

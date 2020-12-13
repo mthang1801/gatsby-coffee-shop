@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from "../components/Globals/layout"
 import ProductsList from "../components/Products/products-list"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 const getProducts = graphql`
 {
   products : allContentfulCoffeeShopProducts{
@@ -25,10 +25,13 @@ const getProducts = graphql`
 }
 `
 const ProductsPage = () => {
-  const {products} = useStaticQuery(getProducts)   
+  const { products } = useStaticQuery(getProducts)
   return (
-    <Layout title="our products"> 
-      <ProductsList products={products.edges}/>
+    <Layout title="our products">
+      <div className="content">
+        <ProductsList products={products.edges} />
+      </div>
+
     </Layout>
   )
 }

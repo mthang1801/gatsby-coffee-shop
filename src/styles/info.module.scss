@@ -1,10 +1,12 @@
 .info{  
-  margin : 2rem auto;
-  text-align: center;
+  padding : 3rem 0;
+  background-color: var(--mainGrey);
 }
 
 .center{
-  margin: 2rem 0;
+  width : 80vw; 
+  margin : 0 auto;
+  text-align: center;
 }
 
 
@@ -12,5 +14,15 @@
   cursor: pointer;
   &:hover{
     color : var(--mainYellow);
+  }
+}
+
+.paragraph{
+  margin : 2rem auto;
+}
+
+@media screen and (min-width: 768px){
+  .center{
+    width : 600px;
   }
 }

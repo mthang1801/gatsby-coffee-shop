@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styles from "../../styles/navbar.module.scss"
 import logo from "../../images/coffee-brand-icon.png"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { FaAlignRight } from "react-icons/fa"
+import { FaAlignRight, FaCartArrowDown } from "react-icons/fa"
 import links from "../../constants/links"
 import Menu from "./menu"
 
@@ -54,6 +54,11 @@ const Navbar = () => {
             {link.name === "menu" ? <Menu isOpen={isOpenMenu}/> : null}  
           </li>                    
         ))}        
+        <li>
+          <button type="button" className={`${styles.cartIcon} snipcart-checkout`}>
+            <FaCartArrowDown/>
+          </button>
+        </li>
         
       </ul>
       

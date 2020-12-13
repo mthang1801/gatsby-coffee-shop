@@ -2,6 +2,7 @@
 :root {
   --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
+  --darkYellow: rgb(206, 136, 30);
   --mainIndigo : #283593;
   --mainGreen : #43a047 ;
   --mainRed : #e53935 ;
@@ -82,6 +83,7 @@ li{
 .txt-center{
   text-align: center;
 }
+
 
 @media screen and (min-width:992px){
   .container{    

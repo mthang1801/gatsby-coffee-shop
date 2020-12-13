@@ -18,7 +18,14 @@ const ProductCard = ({ product }) => {
         <h4 title={product.title} className={styles.title}>{product.title.length > 25? `${product.title.slice(0,25)}...` : product.title }</h4>
 
         <h4 className={styles.price}>Price: ${product.price}</h4>
-        <button type="button" className={styles.btnAddToCart}>
+        <button className={`${styles.btnAddToCart} snipcart-add-item`}
+            data-item-id={product.contentful_id}
+            data-item-price={product.price}
+            data-item-url={`/product/${product.contentful_id}`}
+            data-item-description={product.description}
+            data-item-image={product.image.fluid.src}
+            data-item-name={product.title}
+        >
           Add to cart{" "}
           <span>
             <FaCartPlus />

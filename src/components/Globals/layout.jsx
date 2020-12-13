@@ -8,10 +8,8 @@ const Layout = ({ img, title, home, children, className }) => {
   return (
     <main className={className}>
       <Navbar />
-      <BackgroundSection img={img} title={title} home={home}/>      
-      <div className="content">
-        {children}      
-      </div>
+      <BackgroundSection img={img} title={title} home={home}/>            
+        {children}            
       <Footer />
     </main>
   )

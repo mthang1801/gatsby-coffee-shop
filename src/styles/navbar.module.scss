@@ -33,7 +33,22 @@
   font-size: 2em;  
 }
 
+.cart-icon{
+  border : none ; 
+  font-size: 1.1em;
+  color : var(--mainYellow);
+  outline : none ; 
+  background-color: transparent;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  &:hover{
+    font-size : 1.2em;
+  }
+}
+
 .nav-links{
+  display : flex ;
+  align-items: center;
   list-style-type: none;
   max-height : 0 ;   
   visibility: hidden;
@@ -64,6 +79,7 @@
 .nav-link:hover{
    color : var(--mainYellow)
 }
+
 
 @media screen and (min-width:992px){
   .toggleBtn{
